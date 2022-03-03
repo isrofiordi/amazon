@@ -5,7 +5,7 @@ pages << {
   url: "https://www.amazon.com/s?k=LED+%26+LCD+TVs&i=electronics&rh=n%3A6459737011&qid=1629141285&ref=sr_pg_1",
   vars: {
     category: "LED & LCD TVs",
-    "i" => 2
+    "i" => 1
   },
   fetch_type: "browser"
 }
