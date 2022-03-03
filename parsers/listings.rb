@@ -29,9 +29,8 @@ if indeks < 6 #ambil 5 halaman dulu
         url: next_url,
         vars: {
             category: "LED & LCD TVs",
-            "i" => indeks
+            "i" => indeks+1 # increment indeks, ke halaman selanjutnya
         },
         fetch_type: "browser"
     }
 end
-indeks += 1 # increment indeks, ke halaman selanjutnya
