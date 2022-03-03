@@ -16,7 +16,7 @@ end
 
 # cari link halaman selanjutnya
 indeks = page['vars']['i']
-next_url_ref = nokogiri.at_css('a.s-pagination-item')["href"] unless nokogiri.css('a.s-pagination-item').nil?
+next_url_ref = nokogiri.at_css('a.s-pagination-item.s-pagination-next.s-pagination-button.s-pagination-separator')["href"] unless nokogiri.css('a.s-pagination-item.s-pagination-next.s-pagination-button.s-pagination-separator').nil?
 
 
 next_url = "https://www.amazon.com" + next_url_ref
