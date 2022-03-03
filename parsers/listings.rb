@@ -20,7 +20,6 @@ next_url_ref = nokogiri.at_css('a.s-pagination-item.s-pagination-next.s-paginati
 
 
 next_url = "https://www.amazon.com" + next_url_ref
-indeks += 1 # increment indeks
 
 if indeks < 6 #ambil 5 halaman dulu
     pages << {
@@ -35,3 +34,4 @@ if indeks < 6 #ambil 5 halaman dulu
         fetch_type: "browser"
     }
 end
+indeks += 1 # increment indeks, ke halaman selanjutnya
