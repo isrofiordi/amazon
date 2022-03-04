@@ -10,7 +10,8 @@ products.each do |product|
           vars: {
             category: page['vars']['category'],
             url: url
-          }
+          },
+          fetch_type: "browser"
     }
 end
 
