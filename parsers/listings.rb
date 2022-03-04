@@ -20,8 +20,9 @@ next_url_ref = nokogiri.at_css('a.s-pagination-item.s-pagination-next.s-paginati
 
 
 next_url = "https://www.amazon.com" + next_url_ref
+indeks += 1 # increment indeks, ke halaman selanjutnya
 
-if indeks < 6 #ambil 5 halaman dulu
+if indeks < 6 # ambil 5 halaman dulu
     pages << {
         page_type: "listings",
         method: "GET",
@@ -29,7 +30,7 @@ if indeks < 6 #ambil 5 halaman dulu
         url: next_url,
         vars: {
             category: "LED & LCD TVs",
-            "i" => indeks+1 # increment indeks, ke halaman selanjutnya
+            "i" => indeks 
         },
         fetch_type: "browser"
     }
