@@ -10,3 +10,12 @@ parsers:
   - page_type: products
     file: ./parsers/products.rb
     disabled: false
+
+exporters:
+  - exporter_name: products_json # Must be unique
+    exporter_type: json
+    collection: products
+    write_mode: pretty_array # can be `line`,`pretty`, `pretty_array`, or `array`
+    offset: 0 # offset to where the exported record will start from
+    order: desc # can be ascending `asc` or descending `desc`
+    start_on_job_done: true
