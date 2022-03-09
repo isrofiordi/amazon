@@ -17,13 +17,13 @@ end
 
 # cari link halaman selanjutnya
 indeks = page['vars']['i']
-next_url_ref = nokogiri.at_css('a.s-pagination-item.s-pagination-next.s-pagination-button.s-pagination-separator')["href"] unless nokogiri.css('a.s-pagination-item.s-pagination-next.s-pagination-button.s-pagination-separator').nil?
+next_url_ref = nokogiri.at_css('a.s-pagination-item.s-pagination-next.s-pagination-button.s-pagination-separator')["href"] unless nokogiri.at_css('a.s-pagination-item.s-pagination-next.s-pagination-button.s-pagination-separator').nil?
 
 
 next_url = "https://www.amazon.com" + next_url_ref
 indeks += 1 # increment indeks, ke halaman selanjutnya
 
-if indeks < 6 # ambil 5 halaman dulu
+if nokogiri.at_css('a.s-pagination-item.s-pagination-next.s-pagination-button.s-pagination-separator') # kalo ga ketemu next jangan load page selanjutnya
     pages << {
         page_type: "listings",
         method: "GET",

@@ -21,6 +21,7 @@ end
 #extract title
 product['title'] = ""
 product['title'] = nokogiri.at_css('span#productTitle').text.strip unless nokogiri.at_css('span#productTitle').nil?
+raise "title could not be extracted" if nokogiri.at_css('span#productTitle').nil? #early warning if page error
 
 #extract seller/author
 product['seller'] = ""
